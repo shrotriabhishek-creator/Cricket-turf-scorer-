@@ -1,0 +1,58 @@
+:root {
+  color-scheme: light;
+  --green: #123d2b;
+  --green2: #1d6847;
+  --ink: #17231d;
+  --muted: #6c7a72;
+  --line: #e4ebe6;
+  --bg: #f2f6f3;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+.app { width: min(100%, 540px); margin: 0 auto; padding: max(20px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom)); }
+.topbar { display:flex; align-items:center; gap:12px; margin: 8px 2px 20px; }
+.brand-mark { width:46px;height:46px;border-radius:15px;background:#dcebe1;display:grid;place-items:center;font-size:25px; }
+.eyebrow { font-size:10px;letter-spacing:1.6px;font-weight:800;color:var(--green2); }
+h1 { margin:2px 0 0;font-size:19px;letter-spacing:-.4px; }
+.status { margin-left:auto;background:#dff3e6;color:#17623d;border-radius:30px;padding:7px 11px;font-size:10px;font-weight:900;letter-spacing:1px; }
+.status.done { background:#fff0d9;color:#87520b; }
+.score-panel { background:linear-gradient(145deg,#174d35,#0d3022);color:white;border-radius:25px;padding:23px 22px 19px;box-shadow:0 12px 28px #153c2a24; }
+.score-label { color:#b9d8c5;font-size:10px;font-weight:800;letter-spacing:1.8px; }
+.score-line { display:flex;align-items:baseline;gap:5px;font-size:76px;line-height:1.08;font-weight:850;letter-spacing:-4px;font-variant-numeric:tabular-nums; }
+.score-line .slash { font-size:42px;color:#8fb69c;font-weight:400;margin:0 1px; }
+.overs-line { margin-top:3px;color:#e0f0e5;font-size:15px; }
+.overs-line strong { font-size:18px; }
+.muted { color:#a8c9b3; }
+.stats { display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid #ffffff2b;margin-top:19px;padding-top:15px; }
+.stats div { display:flex;flex-direction:column;gap:5px; }
+.stat-label { color:#a9cdb6;font-size:9px;font-weight:800;letter-spacing:1.2px; }
+.stats strong { font-size:15px;font-variant-numeric:tabular-nums; }
+.section { margin-top:25px; }
+.section-heading { display:flex;align-items:baseline;justify-content:space-between;margin:0 2px 12px;gap:8px; }
+h2 { margin:0;font-size:16px;letter-spacing:-.2px; }
+.section-heading span { color:var(--muted);font-size:11px; }
+.run-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:10px; }
+button { border:0;font:inherit;cursor:pointer;touch-action:manipulation; }
+button:focus-visible { outline:3px solid #72b88d;outline-offset:3px; }
+button:disabled { opacity:.35;cursor:not-allowed; }
+.run-btn { min-height:68px;border-radius:17px;background:white;border:1px solid var(--line);font-size:25px;font-weight:800;color:var(--ink);box-shadow:0 3px 8px #152e1d08; }
+.run-btn:active,.event-btn:active { transform:scale(.97); }
+.run-btn.boundary { background:#e6f2e9;color:#155b37;border-color:#d5e9da; }
+.run-btn.six { background:var(--green2);color:white;border-color:var(--green2); }
+.extras-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:9px; }
+.event-btn { min-height:66px;border-radius:16px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:750;color:#34463b; }
+.event-btn span { font-size:19px;font-weight:900;color:var(--green2); }
+.event-btn.wicket-btn { background:#fff1ef;border-color:#f4d8d3;color:#a3372c; }
+.event-btn.wicket-btn span { color:#b43d32; }
+.hint { color:var(--muted);font-size:11px;line-height:1.5;margin:10px 3px 0; }
+.actions { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px; }
+.secondary-btn,.reset-btn { min-height:49px;border-radius:14px;font-size:13px;font-weight:800; }
+.secondary-btn { background:#e5eee8;color:#20583a; }
+.reset-btn { background:#fff;color:#9b4037;border:1px solid #f0dedb; }
+.message { min-height:18px;text-align:center;color:var(--green2);font-size:12px;font-weight:650;margin:16px 0 8px; }
+footer { text-align:center;color:#89958e;font-size:10px;margin-top:12px; }
+@media (max-width:360px) { .app{padding-left:13px;padding-right:13px}.score-line{font-size:66px}.run-btn{min-height:61px} }

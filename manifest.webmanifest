@@ -1,0 +1,13 @@
+{
+  "name": "Turf Cricket Scorer",
+  "short_name": "Turf Scorer",
+  "description": "A simple offline 6-over cricket scorer.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f6f3",
+  "theme_color": "#123d2b",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
